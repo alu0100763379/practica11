@@ -7,6 +7,10 @@ class Pregunta
 		@respuesta = respuesta
 	end
 
+	def respuesta 
+		"a) #{@respuesta[0]}\nb) #{@respuesta[1]}\nc) #{@respuesta[2]}\nd) #{@respuesta[3]}\n"
+	end
+	
 	def to_s
 		"#{pregunta}\n#{respuesta}"
 	end

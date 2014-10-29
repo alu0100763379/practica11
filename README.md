@@ -1,6 +1,8 @@
 # Exam
 
-TODO: Write a gem description
+Práctica numero 5 y 6 del Grupo 37
+Alejandro Ravelo Moreno
+Oscar Trujillo Acosta
 
 ## Installation
 

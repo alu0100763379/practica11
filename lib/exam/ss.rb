@@ -15,6 +15,14 @@ class Pregunta
 		resp
 	end
 	
+	def pre
+			"La pregunta es: @pregunta"	
+	end
+	
+	def addrespuesta (respuesta)
+			@respuesta.push(respuesta)
+	end
+	
 	def to_s
 		"#{pregunta}\n#{respuesta}"
 	end

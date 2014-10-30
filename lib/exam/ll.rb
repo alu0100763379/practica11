@@ -11,7 +11,7 @@ class Lista
     end
 
     def add(value)
-        #adds a new node to the list, amakes it the new head and links it to the former head
+       
         value.next_node = @head
         @head = value
     end

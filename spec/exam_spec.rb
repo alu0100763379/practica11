@@ -18,7 +18,7 @@ describe Exam do
 	  
 	    it "Guardando preguntas" do
 	            
-	           @p1 = Pregunta.new("¿Cual es la salida del siguiente codigo Ruby?")
+	    @p1 = Pregunta.new("¿Cual es la salida del siguiente codigo Ruby?")
 		@p1.addrespuesta("<#Xyz:0xa000208>")
 		@p1.addrespuesta("nil")
 		@p1.addrespuesta("0")
@@ -57,9 +57,14 @@ describe Exam do
 		@lista.add(@n4)
 		@lista.add(@n5)
 	
+	
+	#	expect(@n1.value).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego")
+		expect(@p5.to_s).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego\n 1) Cierto\n2) Falso\n")
+		expect(@n5.value).to eq(@p5)
+	   	expect(@lista.head).should eq(@n5)
 	   
 	    end
-	
+
 	    
 	end
 end
@@ -83,6 +88,7 @@ describe Exam do
      it "Se puede insertar un elemento." do
         @lista.add(@n1)
         expect(@lista.head).to eq(@n1)
+        expect(@n1.value).to eq("Nodo 1")
     end
     
     it "Se pueden insertar varios elementos." do
@@ -96,7 +102,7 @@ describe Exam do
         expect(@lista.head).to eq(@n1)
     end
     
-    it "" do
+    it "#Debe existir una Lista con su cabeza" do
     	@lista.add(@n1)
     	expect(@lista.head).to eq(@n1)
     end

@@ -10,13 +10,17 @@ class Lista
         @head = nil
     end
 
-    def add(value)
+    def add(nodo)
        
-        value.next_node = @head
-        @head = value
+        nodo.next_node = @head
+        @head = nodo
     end
 
     def remove
         @head = @head.next_node
     end
+    
+    
+    
+    
 end

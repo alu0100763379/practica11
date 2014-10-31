@@ -20,8 +20,7 @@ describe Exam do
 			@sS.to_s.should eq("Que seleccion es la ganadora del mundial de futbol de 2014?\na) Italia\nb) Francia\nc) Alemania\nd) Argentina\n")
 		end
 	end
-end
-
+	
 describe Exam do
     before :each do
         @lista = Lista.new()
@@ -50,3 +49,5 @@ describe Exam do
     end
     
 end
+end
+

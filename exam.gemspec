@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "exam"
   spec.version       = Exam::VERSION
   spec.authors       = ["alu0100763379"]
-  spec.email         = ["alu0100@ull.edu.es"]
+  spec.email         = ["alu0100763379@ull.edu.es"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""

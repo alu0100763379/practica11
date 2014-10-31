@@ -24,6 +24,7 @@ class Pregunta
 	end
 	
 	def to_s
-		"#{pregunta}\n#{respuesta}"
+		#"#{pregunta}\n#{respuesta}"
+		pre + "\n\n" + respuesta
 	end
 end

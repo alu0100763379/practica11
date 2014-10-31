@@ -20,7 +20,4 @@ class Lista
         @head = @head.next_node
     end
     
-    
-    
-    
 end

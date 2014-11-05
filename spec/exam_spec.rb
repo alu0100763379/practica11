@@ -51,9 +51,10 @@ describe Exam do
     		@n5 = Nodo.new(@p5)
     
     		@lista = Lista.new()
-    		@lista.add(@n1)
-    		@lista.add(@n2)
-    		@lista.add(@n3)
+    	
+    		@lista.add_0(@n3)
+    		@lista.add_d(@n2)
+    	    @lista.add_d(@n1)
     		@lista.add(@n4)
     		@lista.add(@n5)
     	
@@ -63,66 +64,29 @@ describe Exam do
     		expect(@n5.value).to eq(@p5)
     	   	expect(@lista.head).should eq(@n5)
     	   	@lista.remove
+    	   	expect(@p1.to_s).to eq("La pregunta es: ¿Cual es la salida del siguiente codigo Ruby?\n 1) <#Xyz:0xa000208>\n2) nil\n3) 0\n4) Ninguna de las anteriores\n" )
+    		expect(@n1.value).to eq(@p1)
+    	   	expect(@lista.tail).should eq(@n1)
+    	   	@lista.remove_d
     	   	expect(@p4.to_s).to eq("La pregunta es: ¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n 1) Una instancia de la clase Class\n2) Una constante\n3) Un objeto\n4) Ninguna de las anteriores\n" )
     		expect(@n4.value).to eq(@p4)
     	   	expect(@lista.head).should eq(@n4)
     	   	@lista.remove
-    	   	expect(@p3.to_s).to eq("La pregunta es: ¿Cual es la salida del siguiente codigo Ruby?\n 1) 1\n2) bob\n3) HEY!\n4) Ninguna de las anteriores\n" )
-    		expect(@n3.value).to eq(@p3)
-    	   	expect(@lista.head).should eq(@n3)
-    	   	@lista.remove
     	   	expect(@p2.to_s).to eq("La pregunta es: La siguiente definicion de un hash en ruby es valida:\n 1) Cierto\n2) Falso\n" )
     		expect(@n2.value).to eq(@p2)
-    	   	expect(@lista.head).should eq(@n2)
-    	   	@lista.remove
-    	   	expect(@p1.to_s).to eq("La pregunta es: ¿Cual es la salida del siguiente codigo Ruby?\n 1) <#Xyz:0xa000208>\n2) nil\n3) 0\n4) Ninguna de las anteriores\n" )
-    		expect(@n1.value).to eq(@p1)
-    	   	expect(@lista.head).should eq(@n1)
+    	   	expect(@lista.tail).should eq(@n2)
+    	   	@lista.remove_d
+    	   	expect(@p3.to_s).to eq("La pregunta es: ¿Cual es la salida del siguiente codigo Ruby?\n 1) 1\n2) bob\n3) HEY!\n4) Ninguna de las anteriores\n" )
+    		expect(@n3.value).to eq(@p3)
+    	   	expect(@lista.tail).should eq(@n3)
+    	
+    	   
+    	   
     	   	
 	   
 	    end
 
 	    
 	end
-end
-
-describe Exam do
-    before :each do
-        @lista = Lista.new()
-        @n1 = Nodo.new("Nodo 1")
-        @n2 = Nodo.new("Nodo 2")
-        @n3 = Nodo.new("Nodo 3")
-    end
-    
-    
-     it "Se extrae el primer elemento de la lista." do
-        @lista.add(@n1)
-        @lista.add(@n2)
-        @lista.remove
-        expect(@lista.head).to eq(@n1)
-    end
-    
-     it "Se puede insertar un elemento." do
-        @lista.add(@n1)
-        expect(@lista.head).to eq(@n1)
-        expect(@n1.value).to eq("Nodo 1")
-    end
-    
-    it "Se pueden insertar varios elementos." do
-        @lista.add(@n1)
-        @lista.add(@n2)
-        @lista.add(@n3)
-        expect(@lista.head).to eq(@n3)
-        @lista.remove
-        expect(@lista.head).to eq(@n2)
-        @lista.remove
-        expect(@lista.head).to eq(@n1)
-    end
-    
-    it "#Debe existir una Lista con su cabeza" do
-    	@lista.add(@n1)
-    	expect(@lista.head).to eq(@n1)
-    end
-    
 end
 

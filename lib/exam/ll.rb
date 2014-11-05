@@ -4,7 +4,7 @@ Nodo = Struct.new(:value, :next_node, :prev_node)
 
 class Lista
 
-    attr_accessor :head, :value, :next_node, :tail
+    attr_accessor :head, :value, :next_node, :tail, :prev_node
 
     def initialize
         @head = nil
@@ -30,7 +30,7 @@ class Lista
         @head = @head.next_node
     end
     
-    def remove_d(nodo)
+    def remove_d
         @tail = @tail.prev_node
     end
     

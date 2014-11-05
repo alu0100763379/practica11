@@ -34,10 +34,11 @@ class Lista
         @tail = @tail.prev_node
     end
     
-     def add_d(nodo)
+    def add_d(nodo)
         nodo.prev_node = @tail
         @tail.next_node = nodo
         @tail = nodo
     end
+  
     
 end

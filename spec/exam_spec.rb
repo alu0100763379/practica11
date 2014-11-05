@@ -59,6 +59,9 @@ describe Exam do
     		@lista.add(@n5)
     	
     	
+    	   #expect (@lista.to_s.to eq(@n1.value @n2.value @n3.vaule @n4.value @n5.value)
+    	   
+    	
     	    #expect(@n1.value).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego")
     		expect(@p5.to_s).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego\n 1) Cierto\n2) Falso\n")
     		expect(@n5.value).to eq(@p5)
@@ -79,14 +82,9 @@ describe Exam do
     	   	expect(@p3.to_s).to eq("La pregunta es: ¿Cual es la salida del siguiente codigo Ruby?\n 1) 1\n2) bob\n3) HEY!\n4) Ninguna de las anteriores\n" )
     		expect(@n3.value).to eq(@p3)
     	   	expect(@lista.tail).should eq(@n3)
-    	
-    	   
-    	   
+    	    
     	   	
-	   
-	    end
-
-	    
+	   end
 	end
 end
 

@@ -18,31 +18,29 @@ describe Exam do
 	  
 	    it "Guardando preguntas" do
 	            
-    	    @p1 = Pregunta.new("¿Cual es la salida del siguiente codigo Ruby?")
+    	    @p1 = RespuestaSS.new("¿Cual es la salida del siguiente codigo Ruby?")
     		@p1.addrespuesta("<#Xyz:0xa000208>")
     		@p1.addrespuesta("nil")
     		@p1.addrespuesta("0")
     		@p1.addrespuesta("Ninguna de las anteriores")
     		
-    		@p2 = Pregunta.new("La siguiente definicion de un hash en ruby es valida:")
-    		@p2.addrespuesta("Cierto")
-    		@p2.addrespuesta("Falso")
+    		@p2 = RespuestaV.new("La siguiente definicion de un hash en ruby es valida:")
+    		
     
-    		@p3 = Pregunta.new("¿Cual es la salida del siguiente codigo Ruby?")
+    		@p3 = RespuestaSS.new("¿Cual es la salida del siguiente codigo Ruby?")
     		@p3.addrespuesta("1")
     		@p3.addrespuesta("bob")
     		@p3.addrespuesta("HEY!")
     		@p3.addrespuesta("Ninguna de las anteriores")
     
-    		@p4 = Pregunta.new("¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
+    		@p4 = RespuestaSS.new("¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
     		@p4.addrespuesta("Una instancia de la clase Class")
     		@p4.addrespuesta("Una constante")
     		@p4.addrespuesta("Un objeto")
     		@p4.addrespuesta("Ninguna de las anteriores")
     
-    		@p5 = Pregunta.new("Es apropiado que una clase Tablero herede de una clase Juego")
-    		@p5.addrespuesta("Cierto")
-    		@p5.addrespuesta("Falso")
+    		@p5 = RespuestaV.new("Es apropiado que una clase Tablero herede de una clase Juego")
+    
     
     		@n1 = Nodo.new(@p1)
     		@n2 = Nodo.new(@p2)

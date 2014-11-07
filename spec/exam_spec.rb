@@ -14,10 +14,8 @@ describe Exam do
   	    it "Debe existir una pregunta." do
 		            expect(@sS.pregunta).to eq("Question?")
 	    end
-	    
 	  
 	    it "Guardando preguntas" do
-	            
     	    @p1 = Pregunta.new("¿Cual es la salida del siguiente codigo Ruby?")
     		@p1.addrespuesta("<#Xyz:0xa000208>")
     		@p1.addrespuesta("nil")

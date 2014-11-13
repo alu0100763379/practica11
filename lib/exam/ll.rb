@@ -3,7 +3,6 @@
 Nodo = Struct.new(:value, :next_node, :prev_node)
 
 class Lista
-
     attr_accessor :head, :value, :next_node, :tail, :prev_node
 
     def initialize
@@ -26,11 +25,11 @@ class Lista
         
     end
 
-    def remove
+    def walk
         @head = @head.next_node
     end
     
-    def remove_d
+    def moonwalk
         @tail = @tail.prev_node
     end
     
@@ -39,6 +38,12 @@ class Lista
         @tail.next_node = nodo
         @tail = nodo
     end
-  
     
+    def each
+        i = @head
+        while i != nil do
+            yield i
+            i = i.walk
+        end
+    end
 end

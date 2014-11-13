@@ -1,8 +1,10 @@
 #Clase para representar a las Preguntas de seleccion simple
 
 class Pregunta
-    attr_reader :pregunta, :respuesta 
-	def initialize(pregunta)
+	include Comparable
+    attr_reader :pregunta, :respuesta, :level 
+	def initialize(pregunta, level)
+		@level = level
 		@pregunta = pregunta
 		@respuesta = Array.new(0)
 	end
@@ -18,6 +20,19 @@ class Pregunta
 		"#{pre}\n#{respuesta}"
 		#pre + "\n\n" + respuesta
 	end
+	
+	def <=>(other)
+		
+		@level <=> other.level
+				
+	end
+	
+	def ==(other)
+		
+		@pregunta.length == other.pregunta.length
+			
+	end
+	
 end
 
 

@@ -21,7 +21,7 @@ describe Exam do
 
 	            
     	 
-    	    @p1 = RespuestaSS.new("¿Cual es la salida del siguiente codigo Ruby?", 2)
+    	    @p1 = RespuestaSS.new("¿Cual es la salida del siguiente codigo Ruby?", 3)
 
     		@p1.addrespuesta("<#Xyz:0xa000208>")
     		@p1.addrespuesta("nil")
@@ -45,9 +45,23 @@ describe Exam do
     
     		@p5 = RespuestaV.new("Es apropiado que una clase Tablero herede de una clase Juego", 2)
     
-    		expect(@p5 < @p3).to eq(true)
-    		expect(@p5 == @p5).to eq(true)
     
+    		
+    		expect(@p2 >= @p4). to eq(true)
+    		
+    		expect(@p2 >= @p5). to eq(true)
+    		
+    		expect(@p5 < @p3).to eq(true)
+    		
+    		expect(@p5 > @p3).to eq(false)
+    		
+    		expect(@p5 == @p5).to eq(true)
+    		
+    		expect(@p4.between?(@p1, @p3)).to eq(true)
+    		
+    		
+    		
+    		
     
     	
     
@@ -72,8 +86,36 @@ describe Exam do
     	
     	
     	   #expect (@lista.to_s.to eq(@n1.value @n2.value @n3.vaule @n4.value @n5.value)
-    	   
-    	
+			expect(@lista.count).to eq(5)   
+			#expect((@lista.all?) {|nodo| nodo.level < 9 }).to eq(true)
+			
+			#expect(@lista.max { |@n1.level, @n2.level, @n3.level, @n4.level, @n5.level| @n2.level  <=> @n4.level }).to eq(@n4)
+			
+			
+			
+			
+			#expect(@lista.max).to eq(@n4)
+			#expect(@lista.min).to eq(@n5)
+			
+		
+		
+		
+		
+		
+			#expect(@lista.find_index {|1| i.value == @n3.value}).to eq(2)
+			
+			
+			
+			#expect(@lista.max {|a, b, c, d, e| a.level <=>  d.level}).to eq(d)
+			
+			
+			#expect(@lista.max).to eq(@n4)
+			
+			
+			
+			#expect(@lista.all?).to eq()
+ 			#expect(@lista.max).to eq(4)
+ 			
     	    #expect(@n1.value).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego")
     		expect(@p5.to_s).to eq("La pregunta es: Es apropiado que una clase Tablero herede de una clase Juego\n 1) Cierto\n2) Falso\n")
     		expect(@n5.value).to eq(@p5)

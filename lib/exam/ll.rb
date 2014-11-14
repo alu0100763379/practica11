@@ -3,11 +3,14 @@
 Nodo = Struct.new(:value, :next_node, :prev_node)
 
 class Lista
-    attr_accessor :head, :value, :next_node, :tail, :prev_node
+    include Enumerable
+
+    attr_accessor :head, :value, :next_node, :tail, :prev_node, 
 
     def initialize
         @head = nil
         @tail = nil
+    
     end
     
     def add_0(nodo)
@@ -15,6 +18,7 @@ class Lista
         nodo.prev_node = @tail
         @head = nodo
         @tail = nodo
+       
         
     end
 
@@ -22,10 +26,13 @@ class Lista
         nodo.next_node = @head
         @head.prev_node = nodo
         @head = nodo
+      
+            
         
     end
 
     def walk
+
         @head = @head.next_node
     end
     
@@ -37,13 +44,14 @@ class Lista
         nodo.prev_node = @tail
         @tail.next_node = nodo
         @tail = nodo
+     
     end
     
     def each
         i = @head
-        while i != nil do
-            yield i
-            i = i.walk
+        while (i != nil) 
+            yield i.value
+            i = i.next_node
         end
     end
 end

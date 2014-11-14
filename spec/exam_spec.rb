@@ -57,6 +57,8 @@ describe Exam do
     		
     		expect(@p5 == @p5).to eq(true)
     		
+    		expect(@p2 == @p4).to eq(false)
+    		
     		expect(@p4.between?(@p1, @p3)).to eq(true)
     		
     		
@@ -94,8 +96,8 @@ describe Exam do
 			
 			
 			
-			#expect(@lista.max).to eq(@n4)
-			#expect(@lista.min).to eq(@n5)
+			expect(@lista.max).to eq(@p3)
+			expect(@lista.min).to eq(@p5)
 			
 		
 		

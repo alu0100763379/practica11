@@ -3,7 +3,8 @@
 class Pregunta
 	include Comparable
     attr_reader :pregunta, :respuesta, :level 
-	def initialize(pregunta, level)
+	
+	def initialize( pregunta, level)
 		@level = level
 		@pregunta = pregunta
 		@respuesta = Array.new(0)
@@ -21,15 +22,17 @@ class Pregunta
 		#pre + "\n\n" + respuesta
 	end
 	
-	def <=>(other)
+	
+	
+	def <=> (other)
 		
 		@level <=> other.level
 				
 	end
 	
-	def ==(other)
+	def == (other)
 		
-		@pregunta.length == other.pregunta.length
+		@pregunta.size == other.pregunta.size
 			
 	end
 	

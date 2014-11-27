@@ -15,9 +15,8 @@ end
 
 class Lista
     include Enumerable
-   
 
-    attr_accessor :head, :value, :next_node, :tail, :prev_node, 
+    attr_accessor :head, :value, :next_node, :tail, :prev_node
 
     def initialize
         @head = nil
@@ -38,12 +37,10 @@ class Lista
         nodo.next_node = @head
         @head.prev_node = nodo
         @head = nodo
-      
         
     end
 
     def walk
-
         @head = @head.next_node
     end
     
@@ -58,6 +55,9 @@ class Lista
      
     end
     
+    
+    
+    
     def each
         i = @head
         while (i != nil) 
@@ -65,4 +65,5 @@ class Lista
             i = i.next_node
         end
     end
+    
 end

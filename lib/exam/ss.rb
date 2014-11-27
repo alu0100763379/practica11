@@ -2,12 +2,14 @@
 
 class Pregunta
 	include Comparable
-    attr_reader :pregunta, :respuesta, :level 
+    attr_reader :pregunta, :respuesta, :level
+    
 	
 	def initialize( pregunta, level)
 		@level = level
 		@pregunta = pregunta
 		@respuesta = Array.new(0)
+	
 	end
 
 	
@@ -35,6 +37,8 @@ class Pregunta
 		@pregunta.size == other.pregunta.size
 			
 	end
+	
+	
 	
 end
 

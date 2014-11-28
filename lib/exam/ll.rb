@@ -9,7 +9,7 @@ class Nodo
 		
 		@level <=> other.level
 				
-	end
+	    end
 end
 
 
@@ -29,15 +29,12 @@ class Lista
         nodo.prev_node = @tail
         @head = nodo
         @tail = nodo
-       
-        
     end
 
     def add(nodo)
         nodo.next_node = @head
         @head.prev_node = nodo
         @head = nodo
-        
     end
 
     def walk
@@ -52,11 +49,7 @@ class Lista
         nodo.prev_node = @tail
         @tail.next_node = nodo
         @tail = nodo
-     
     end
-    
-    
-    
     
     def each
         i = @head
@@ -66,4 +59,23 @@ class Lista
         end
     end
     
+    def ordenar()
+           cont = (self.count)
+           cont = cont-1
+           aux = self.sort
+           @head = nil
+           @tail = aux[0]
+           while (cont >= 0) do
+                self.add(aux[cont])
+                cont = cont-1
+           end
+    end
+    
+=begin    
+    def reverse
+        while (@head != nil)
+        
+        end
+    end
+=end    
 end

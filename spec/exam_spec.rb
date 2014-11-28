@@ -80,20 +80,31 @@ describe Exam do
             expect(@e.is_a?(Examen)).to be(true)
             end
             
-            it "Interfaz funciona" do
+            it "Nota de usuario" do
             
             @e=Examen.new(@lista, @solucion)
             @i=Interfaz.new(@e, @eleccion)
             expect(@e.correctas.head.value).to eq(@eleccion.head.value)
+            #expect(@i.nota).to eq(10)
             expect(@i.nota).to eq(10)
             
             
             end
-            
-            
-              
-            
+          
+            #it "¿Se puede ordenar una lista?" do
+             #   @lista.ordenar
+            #end
+
+           # it "Clase examen, muestra las preguntas en orden" do
+            #    exam = Examen.new(@lista, @solucion)
+            #    expect(exam.to_s).to eq(@p5.to_s+"\n"+@p2.to_s+"\n"+@p1.to_s+"\n"+@p3.to_s+"\n"+@p4.to_s+"\n")
+            #end
         
+            it "Practica 10: invertir orden" do
+                examen = Examen.new(@lista, @solucion)
+                expect(examen.inverso).to eq(@p5.to_s+"\n"+@p4.to_s+"\n"+@p3.to_s+"\n"+@p2.to_s+"\n"+@p1.to_s+"\n")
+            end
+            
     end
 
 end

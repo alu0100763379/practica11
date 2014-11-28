@@ -2,7 +2,7 @@
 
 class Pregunta
 	include Comparable
-    attr_reader :pregunta, :respuesta, :level
+    attr_reader :pregunta, :respuesta, :level, :value
     
 	
 	def initialize( pregunta, level)

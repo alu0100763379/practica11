@@ -1,8 +1,6 @@
 require "exam/version"
-require "exam/ss"
-require "exam/ll"
-require "exam/examen"
-require "exam/interfaz"
+require "exam/quiz2"
+
 module Exam
   # Your code goes here...
 end
